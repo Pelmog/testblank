@@ -76,7 +76,7 @@ with col1:
         st.session_state.calculations = []
         st.session_state.current_value = 0.0
         st.session_state.operation_history = []
-        st.experimental_rerun()
+        st.rerun()
 
 with col2:
     # Rollback controls
@@ -85,7 +85,7 @@ with col2:
     
     if st.button("Rollback") and st.session_state.calculations:
         rollback(steps_to_rollback)
-        st.experimental_rerun()
+        st.rerun()
 
 # Display ticker tape
 st.subheader("Ticker Tape")
